@@ -1,0 +1,144 @@
+---
+// Contact Section with Form
+---
+
+<section id="contact-form" class="relative py-32 px-6">
+    <!-- Background -->
+    <div class="absolute inset-0 overflow-hidden">
+        <div
+            class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-t from-cyan-500/10 via-lime-500/5 to-transparent blur-3xl"
+        >
+        </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto relative z-10">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl md:text-5xl font-bold font-display mb-4">
+                <span class="text-white">Start a </span>
+                <span class="text-gradient">Project</span>
+            </h2>
+            <p class="text-white/60 text-lg max-w-xl mx-auto">
+                Have an idea? Let's build it together. We respond within 24
+                hours.
+            </p>
+        </div>
+
+        <!-- Contact Form -->
+        <form
+            action="https://formspree.io/f/your-form-id"
+            method="POST"
+            class="glassmorphism-strong rounded-3xl p-8 md:p-12"
+        >
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <!-- Name -->
+                <div>
+                    <label
+                        for="name"
+                        class="block text-white/70 text-sm font-medium mb-2"
+                        >Your Name</label
+                    >
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        placeholder="Ahmed Benali"
+                        class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/30 focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/30 focus:outline-none transition-colors"
+                    />
+                </div>
+
+                <!-- Email -->
+                <div>
+                    <label
+                        for="email"
+                        class="block text-white/70 text-sm font-medium mb-2"
+                        >Email Address</label
+                    >
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        placeholder="ahmed@company.dz"
+                        class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/30 focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/30 focus:outline-none transition-colors"
+                    />
+                </div>
+            </div>
+
+            <!-- Project Type -->
+            <div class="mb-6">
+                <label
+                    for="project-type"
+                    class="block text-white/70 text-sm font-medium mb-2"
+                    >Project Type</label
+                >
+                <select
+                    id="project-type"
+                    name="project-type"
+                    class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/30 focus:outline-none transition-colors appearance-none cursor-pointer"
+                >
+                    <option value="" class="bg-void"
+                        >Select a project type...</option
+                    >
+                    <option value="web-platform" class="bg-void"
+                        >Web Platform / SaaS</option
+                    >
+                    <option value="mobile-app" class="bg-void"
+                        >Mobile Application</option
+                    >
+                    <option value="ai-integration" class="bg-void"
+                        >AI Integration / Automation</option
+                    >
+                    <option value="branding" class="bg-void"
+                        >Brand Identity / Design</option
+                    >
+                    <option value="consulting" class="bg-void"
+                        >Technical Consulting</option
+                    >
+                    <option value="other" class="bg-void">Other</option>
+                </select>
+            </div>
+
+            <!-- Message -->
+            <div class="mb-8">
+                <label
+                    for="message"
+                    class="block text-white/70 text-sm font-medium mb-2"
+                    >Tell us about your project</label
+                >
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                    placeholder="Describe your vision, goals, and timeline..."
+                    class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-white/30 focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/30 focus:outline-none transition-colors resize-none"
+                ></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button
+                type="submit"
+                class="w-full py-4 px-8 bg-gradient-innovation rounded-xl font-semibold text-void hover:opacity-90 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-cyan-500/30"
+            >
+                Send Message
+            </button>
+
+            <!-- Privacy Note -->
+            <p class="text-center text-white/40 text-sm mt-4">
+                We respect your privacy. No spam, ever.
+            </p>
+        </form>
+
+        <!-- Alternative Contact -->
+        <div class="text-center mt-8 text-white/50">
+            <p>
+                Or email us directly at <a
+                    href="mailto:hello@digidevagency.dz"
+                    class="text-cyan-400 hover:underline"
+                    >hello@digidevagency.dz</a>
+            </p>
+        </div>
+    </div>
+</section>
