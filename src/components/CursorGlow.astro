@@ -1,0 +1,47 @@
+---
+// Cursor Glow Effect - Follows the mouse with a gradient glow
+---
+
+<div
+    id="cursor-glow"
+    class="pointer-events-none fixed top-0 left-0 w-[500px] h-[500px] rounded-full opacity-0 transition-opacity duration-300 z-50"
+    style="background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, rgba(132, 204, 22, 0.08) 40%, transparent 70%);"
+>
+</div>
+
+<script>
+    const cursorGlow = document.getElementById("cursor-glow");
+
+    if (cursorGlow && window.matchMedia("(pointer: fine)").matches) {
+        // Only enable on devices with a mouse
+        let mouseX = 0;
+        let mouseY = 0;
+        let glowX = 0;
+        let glowY = 0;
+
+        // Track mouse position
+        document.addEventListener("mousemove", (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            cursorGlow.style.opacity = "1";
+        });
+
+        // Hide when mouse leaves window
+        document.addEventListener("mouseleave", () => {
+            cursorGlow.style.opacity = "0";
+        });
+
+        // Smooth animation loop
+        function animate() {
+            // Lerp for smooth following
+            glowX += (mouseX - glowX - 250) * 0.1;
+            glowY += (mouseY - glowY - 250) * 0.1;
+
+            cursorGlow.style.transform = `translate(${glowX}px, ${glowY}px)`;
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    }
+</script>

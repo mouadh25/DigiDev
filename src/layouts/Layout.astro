@@ -1,14 +1,15 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
+import CursorGlow from "../components/CursorGlow.astro";
 
 interface Props {
   title: string;
   description?: string;
 }
 
-const { 
-  title, 
-  description = "DigiDev Agency - AI-Native Design & Development Studio. Building Algeria's next generation of digital products."
+const {
+  title,
+  description = "DigiDev Agency - AI-Native Design & Development Studio. Building Algeria's next generation of digital products.",
 } = Astro.props;
 ---
 
@@ -23,6 +24,7 @@ const {
     <title>{title} | DigiDev Agency</title>
   </head>
   <body class="bg-void min-h-screen">
+    <CursorGlow />
     <slot />
   </body>
 </html>
