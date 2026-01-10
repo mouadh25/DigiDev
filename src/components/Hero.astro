@@ -1,5 +1,5 @@
 ---
-// Hero Section Component - Enhanced with code animation and logo background
+// Hero Section Component - Logo + lateral code animations behind content
 ---
 
 <section
@@ -8,9 +8,9 @@
   <!-- Animated Grid Background -->
   <div class="absolute inset-0 animated-grid opacity-20"></div>
 
-  <!-- Large Logo Background - More visible -->
+  <!-- Large Logo Background - Discrete center -->
   <div
-    class="absolute inset-0 flex items-center justify-center pointer-events-none"
+    class="absolute inset-0 flex items-center justify-center pointer-events-none z-0"
   >
     <div
       class="relative w-[400px] h-[400px] md:w-[500px] md:h-[500px] opacity-[0.08]"
@@ -33,8 +33,56 @@
   >
   </div>
 
-  <!-- Hero Content -->
-  <div class="relative z-10 text-center px-6 max-w-5xl mx-auto">
+  <!-- Code Animation - LEFT (behind content, closer to center) -->
+  <div
+    class="absolute left-[10%] md:left-[15%] lg:left-[20%] top-1/2 -translate-y-1/2 z-0 hidden md:block"
+  >
+    <div
+      class="glassmorphism rounded-xl p-4 max-w-[240px] opacity-30 hover:opacity-60 transition-opacity"
+    >
+      <div class="flex items-center gap-2 mb-2">
+        <div class="w-2 h-2 rounded-full bg-red-500/80"></div>
+        <div class="w-2 h-2 rounded-full bg-yellow-500/80"></div>
+        <div class="w-2 h-2 rounded-full bg-green-500/80"></div>
+        <span class="text-xs text-white/40 ml-1 font-mono">future.ts</span>
+      </div>
+      <pre
+        class="text-xs font-mono leading-relaxed"><code class="text-white/60"><span class="text-violet-400">const</span> <span class="text-cyan-400">future</span> = <span class="text-orange-400">await</span>
+  <span class="text-lime-400">DigiDev</span>.<span class="text-cyan-300">design</span>()
+    .<span class="text-cyan-300">develop</span>()
+    .<span class="text-cyan-300">deploy</span>();
+
+<span class="text-white/30">// Algeria's digital</span>
+<span class="text-white/30">// tomorrow<span class="typing-cursor">_</span></span></code></pre>
+    </div>
+  </div>
+
+  <!-- Code Animation - RIGHT (behind content, closer to center) -->
+  <div
+    class="absolute right-[10%] md:right-[15%] lg:right-[20%] top-1/2 -translate-y-1/2 z-0 hidden md:block"
+  >
+    <div
+      class="glassmorphism rounded-xl p-4 max-w-[240px] opacity-30 hover:opacity-60 transition-opacity"
+    >
+      <div class="flex items-center gap-2 mb-2">
+        <div class="w-2 h-2 rounded-full bg-red-500/80"></div>
+        <div class="w-2 h-2 rounded-full bg-yellow-500/80"></div>
+        <div class="w-2 h-2 rounded-full bg-green-500/80"></div>
+        <span class="text-xs text-white/40 ml-1 font-mono">ai.py</span>
+      </div>
+      <pre
+        class="text-xs font-mono leading-relaxed"><code class="text-white/60"><span class="text-violet-400">from</span> <span class="text-lime-400">future</span> <span class="text-violet-400">import</span> *
+
+<span class="text-cyan-400">model</span> = <span class="text-lime-400">AI</span>.<span class="text-cyan-300">load</span>(
+  <span class="text-orange-300">"innovation"</span>
+)
+
+<span class="text-cyan-400">result</span> = model.<span class="text-cyan-300">run</span>()<span class="typing-cursor">_</span></code></pre>
+    </div>
+  </div>
+
+  <!-- Hero Content (z-10 = in front of code) -->
+  <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
     <!-- Glassmorphism Badge -->
     <div
       class="inline-flex items-center gap-2 px-5 py-2.5 mb-8 rounded-full glassmorphism hover-glow cursor-default animate-fade-in-up"
@@ -56,47 +104,12 @@
 
     <!-- Subheadline -->
     <p
-      class="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-8 font-body leading-relaxed animate-fade-in-up animation-delay-200"
+      class="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-12 font-body leading-relaxed animate-fade-in-up animation-delay-200"
     >
       Building Algeria's next generation of digital products.
       <br class="hidden md:block" />
       Design. Development. Automation.
     </p>
-
-    <!-- Code Snippets - Closer together below subhead -->
-    <div
-      class="flex flex-wrap justify-center gap-4 mb-12 animate-fade-in-up animation-delay-250"
-    >
-      <!-- TypeScript snippet -->
-      <div
-        class="glassmorphism rounded-xl p-4 opacity-60 hover:opacity-90 transition-opacity text-left"
-      >
-        <div class="flex items-center gap-2 mb-2">
-          <div class="w-2 h-2 rounded-full bg-red-500/80"></div>
-          <div class="w-2 h-2 rounded-full bg-yellow-500/80"></div>
-          <div class="w-2 h-2 rounded-full bg-green-500/80"></div>
-          <span class="text-xs text-white/40 ml-1 font-mono">future.ts</span>
-        </div>
-        <pre
-          class="text-xs font-mono leading-relaxed"><code class="text-white/70"><span class="text-violet-400">const</span> <span class="text-cyan-400">future</span> = <span class="text-orange-400">await</span> <span class="text-lime-400">DigiDev</span>
-  .<span class="text-cyan-300">design</span>().<span class="text-cyan-300">build</span>()<span class="typing-cursor">_</span></code></pre>
-      </div>
-
-      <!-- Python snippet -->
-      <div
-        class="glassmorphism rounded-xl p-4 opacity-60 hover:opacity-90 transition-opacity text-left"
-      >
-        <div class="flex items-center gap-2 mb-2">
-          <div class="w-2 h-2 rounded-full bg-red-500/80"></div>
-          <div class="w-2 h-2 rounded-full bg-yellow-500/80"></div>
-          <div class="w-2 h-2 rounded-full bg-green-500/80"></div>
-          <span class="text-xs text-white/40 ml-1 font-mono">ai.py</span>
-        </div>
-        <pre
-          class="text-xs font-mono leading-relaxed"><code class="text-white/70"><span class="text-cyan-400">result</span> = <span class="text-lime-400">AI</span>.<span class="text-cyan-300">generate</span>(
-  <span class="text-orange-300">"innovation"</span>)<span class="typing-cursor">_</span></code></pre>
-      </div>
-    </div>
 
     <!-- CTA Buttons -->
     <div
@@ -119,7 +132,7 @@
   </div>
 
   <!-- Scroll Indicator -->
-  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-10">
     <div
       class="w-6 h-10 rounded-full border-2 border-white/20 flex items-start justify-center p-2"
     >
@@ -130,7 +143,7 @@
 
   <!-- Bottom Gradient Fade -->
   <div
-    class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-void to-transparent"
+    class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-void to-transparent z-20"
   >
   </div>
 </section>
@@ -224,9 +237,6 @@
   }
   .animation-delay-200 {
     animation-delay: 0.2s;
-  }
-  .animation-delay-250 {
-    animation-delay: 0.25s;
   }
   .animation-delay-300 {
     animation-delay: 0.3s;
