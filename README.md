@@ -1,51 +1,46 @@
-# DigiDev Agency Website
-> **Domain:** `digidevagency.dz`
-> **Tech:** Astro + Tailwind CSS
-> **Status:** 🔄 In Development
+# Astro Starter Kit: Basics
 
-## 🏢 About
-
-DigiDev Agency is not a typical web agency. It is a **Digital Venture Studio** that builds and operates its own products:
-
-- **REXZA** - Fintech SaaS for Auto-Entrepreneurs
-- **Taleem Space** - EdTech Learning Platform
-
-## 🚀 Quick Start
-
-```bash
-# Install dependencies
-npm install
-
-# Run dev server
-npm run dev
-
-# Build for production
-npm run build
+```sh
+npm create astro@latest -- --template basics
 ```
 
-## 📂 Structure
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
+## 🚀 Project Structure
+
+Inside of your Astro project, you'll see the following folders and files:
+
+```text
+/
+├── public/
+│   └── favicon.svg
+├── src
+│   ├── assets
+│   │   └── astro.svg
+│   ├── components
+│   │   └── Welcome.astro
+│   ├── layouts
+│   │   └── Layout.astro
+│   └── pages
+│       └── index.astro
+└── package.json
 ```
-DigiDev/
-├── src/
-│   ├── components/    # Astro components
-│   ├── layouts/       # Page layouts
-│   └── pages/         # Routes
-├── public/            # Static assets
-├── docs/              # Strategy & prompts
-└── astro.config.mjs
-```
 
-## 📚 Documentation
+To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
 
-| Document | Purpose |
-|----------|---------|
-| [STRATEGY.md](docs/STRATEGY.md) | Brand positioning & site architecture |
-| [PROMPTS.md](docs/PROMPTS.md) | Stitch/v0 prompts for UI generation |
-| [BRAND_GUIDE.md](docs/BRAND_GUIDE.md) | Colors, fonts, visual identity |
+## 🧞 Commands
 
-## 🔗 Related
+All commands are run from the root of the project, from a terminal:
 
-- [REXZA](https://rexza.pro) - Our Fintech Flagship
-- [Taleem Space](https://taleem.space) - Our EdTech Platform
-- [Master Plan](../Rexza/docs/DIGIDEV_ECOSYSTEM_MASTER_PLAN.md) - The Big Picture
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+## 👀 Want to learn more?
+
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
